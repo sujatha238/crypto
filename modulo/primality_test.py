@@ -50,17 +50,23 @@ def miller_rabin_test(w, iterations):
             0xf0fa6956d8c7af3ee73bc2d4ec911c8f37442d407daad19ca47910e1a5c5e688, 
             0x5884f036bd33a6576f1f822e6fb9caa5fdd2a20ec14bde4de2d3ef31af4554fb, 
             ]
-    status=1
+
+    status=1  # 1-Prime,  0-composite
     a=1
     w_1=w-1
     print("w = ",hex(w))
     print("w_1 = ",hex(w_1))
+
+
+    # find a
     temp_w_1 = w_1
     while(((temp_w_1>>1)&1)==0):
         a = a + 1
         temp_w_1 = temp_w_1 >> 1
         print("a = ", a)
 
+
+    # m = (w-1)/2**a  ===> (w-1) >> a
     m = w_1 >> a
 
     print("\n")
@@ -69,6 +75,7 @@ def miller_rabin_test(w, iterations):
 
     print("\n\n")
     for i in range(1, iterations+1):
+        print("\n\n\n-------------------------------------------iterataion=",iterations)
 
         b =  b_list[i]
         print("b = ", hex(b))
@@ -84,7 +91,7 @@ def miller_rabin_test(w, iterations):
 
         for j in range(1,a):
             
-            z = (z**2)%w
+            z = (z**2)%w   # (z*z)%w
             print("j = ", j,"z=z^2 mod w = ",hex(z))
             print("------------------------------------------------\n")
             if(z == w_1):
@@ -97,13 +104,19 @@ def miller_rabin_test(w, iterations):
     return(status)
 
 
+
+
+
+
+
+
 #p=0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff
 p=0xe021757c777288dacfe67cb2e59dc02c70a8cebf56262336592c18dcf466e0a4ed405318ac406bd79eca29183901a557db556dd06f7c6bea175dcb8460b6b1bc05832b01eedf86463238b7cb6643deef66bc4f57bf8ff7ec7c4b8a8af14f478980aabedd42afa530ca47849f0151b7736aa4cd2ff37f322a9034de791ebe3f51
-p=0x01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+#p=0x01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 #p=0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff
 
 
-if(miller_rabin_test(p,1)):
+if(miller_rabin_test(p,5)):
     print("Prime : ")
 else:
     print("Not Prime :")
