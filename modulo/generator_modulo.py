@@ -1,8 +1,9 @@
 
 
-p = 19 
+p = 11 
 for a in range(1,p):
-    print(a,"^2 mod",p," = ",(pow(a,2,p)))
+    #print(a,"^2 mod",p," = ",(pow(a,2,p)))
+
     for x in range(1,p):
         print(a,"^",x,"mod",p," = ", pow(a,x,p))
     print();
