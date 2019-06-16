@@ -13,12 +13,12 @@ result=0
 print("\n\n Usage: python3.7  mod_exp.py < mod_exp.txt \n\n")
 while True:
     line = sys.stdin.readline()
-    #print("typeof(line)) = ", type(line))
-    #print("line =",line)
+   # print("typeof(line)) = ", type(line))
+   # print("line =",line)
     if not line:
         break
     lineno = lineno + 1
-    #print(lineno)
+   # print(lineno)
     if(line[0] == " "):
         continue
 
@@ -39,7 +39,8 @@ while True:
     b = int(fields[0],16)
     e = int(fields[1],16)
     m = int(fields[2],16)
-    print("typeof(b) = ", type(b))
+#    print(b)
+    print("typeof(b)  ", type(b))
     print("typeof(e) = ", type(e))
     print("typeof(m) = ", type(m))
     print(" b = ", hex(b))
@@ -49,6 +50,7 @@ while True:
     print(" m = ", hex(m))
     result = pow(b,e,m)
     print(" Result = ",hex(result))
+   # print(" Result = ",result)
     print(" -------------------------------------------------------------------------------------------")
 print()
 
