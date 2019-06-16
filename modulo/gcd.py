@@ -10,7 +10,7 @@ e=0
 m=0
 result=0
 
-print("\n\n Usage: python3.7  gcd.py < gcd.\n")
+print("\n\n Usage: python3.7  gcd.py < gcd.input \n")
 while True:
     line = sys.stdin.readline()
     #print("typeof(line)) = ", type(line))
@@ -44,11 +44,10 @@ while True:
     #e = e >> 1
     #print(" e >> 1 = ", hex(e))
     #print(" m = ", hex(m))
-    
-  #  import modulo_lib.py
     result = gcd(b,e)
-
     print(" Result = ",hex(result))
+   # result =binary_gcd(b,e)
+   # print(" Result 2 = ",hex(result))
     print(" -------------------------------------------------------------------------------------------")
 print()
 
