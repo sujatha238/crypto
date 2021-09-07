@@ -1,0 +1,101 @@
+
+
+
+
+   Camellia (RFC-3713) supports 128/192/256-bit key.
+
+   We need to develop 2 API's:
+	1. Key Schedule (Generation)
+	2. Camellia Encryption.
+
+
+ 1.Key Schedule API:
+      Inputs:
+           1. SBOX[0...255]    --- 32      8-Byte words
+           2. Sigma[1...6]     --- 6       8-Byte words
+           3. KEY-128/192/256  --- 2/3/4   8-Byte words
+  
+      Output:
+           if(KEY-128)         --- 13      8-Byte words
+           else //KEY-192/256  --- 17      8-Byte words
+
+           1. Key Schedule-128/192/256
+                kw1  ||  kw2
+                k1   ||  k2
+                k3   ||  k4
+                k5   ||  k6
+                ke1  ||  ke2
+                k7   ||  k8
+                k9   ||  k10
+                k11  ||  k12
+                ke3  ||  ke4
+                k13  ||  k14
+                k15  ||  k16
+                k17  ||  k18
+
+                if(KEY-192/256){
+                     ke5  ||  ke6
+                     k19  ||  k20
+                     k21  ||  k22
+                     k23  ||  k24
+                }
+
+                kw3  ||  kw4
+               
+
+ 2.Camellia-Encryption API:
+      Inputs:
+           1. SBOX[0...255]    --- 32      8-Byte words
+
+           if(KeyScheduleProvided) {
+              2. Key Schedule-128/192/256  --- 13/17 words
+           } else {// KEY is given (need to generate Key-Schedule)
+              2. Sigma[1...6]     --- 6       8-Byte words
+              3. KEY-128/192/256           --- 2/3/4   8-Byte words
+           }
+
+           4. Data to be encrypted
+
+
+      Output:
+           1. Cipher Data 
+
+
+
+ 3.Camellia-Decryption API:
+          Decryption is Encrypt with swapped Key-Schedule as below
+
+   128-bit key:
+       kw1 <-> kw3
+       kw2 <-> kw4
+       k1  <-> k18
+       k2  <-> k17
+       k3  <-> k16
+       k4  <-> k15
+       k5  <-> k14
+       k6  <-> k13
+       k7  <-> k12
+       k8  <-> k11
+       k9  <-> k10
+       ke1 <-> ke4
+       ke2 <-> ke3
+
+   192- or 256-bit key:
+       kw1 <-> kw3
+       kw2 <-> kw4
+       k1  <-> k24
+       k2  <-> k23
+       k3  <-> k22
+       k4  <-> k21
+       k5  <-> k20
+       k6  <-> k19
+       k7  <-> k18
+       k8  <-> k17
+       k9  <-> k16
+       k10 <-> k15
+       k11 <-> k14
+       k12 <-> k13
+       ke1 <-> ke6
+       ke2 <-> ke5
+       ke3 <-> ke4
+

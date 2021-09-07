@@ -1,0 +1,227 @@
+// n2exer packet file created on Thu Sep 26 11:36:30 IST 2019
+
+// -seed=65537
+
+// ctx-pred    3600000000000000 .0
+
+%I-(ReqFlexiCrypto.c        : 2423) {       0} 
+//================FlexiCrypto-Encrypt===============
+// ---------GP--Header-------------
+
+// encr_length =  16 , auth_length =  16 , encr_offset =  304 , auth_offset =  48 , iv_offset =  0 
+//, cipher_type = CAMELLIA , aes_key = 256 , cipher_mode = CBC , encr_iv_source = CPTR
+//, auth_type = NULL , mac_select = NULL 
+//, auth_input_type = IPAD/OPAD , key_size =  0 , mac_len  =   0 
+//
+
+
+CTXDEF	addr:0x00100000 size:23
+CTXDAT	0600000000000000 .0
+CTXDAT	0123456789abcdef .1
+CTXDAT	fedcba9876543210 .2
+CTXDAT	0011223344556677 .3
+CTXDAT	8899aabbccddeeff .4
+CTXDAT	0000000000000000 .5
+CTXDAT	0000000000000000 .6
+CTXDAT	0000000000000000 .7
+CTXDAT	0000000000000000 .8
+CTXDAT	0000000000000000 .9
+CTXDAT	0000000000000000 .10
+CTXDAT	0000000000000000 .11
+CTXDAT	0000000000000000 .12
+CTXDAT	0000000000000000 .13
+CTXDAT	0000000000000000 .14
+CTXDAT	0000000000000000 .15
+CTXDAT	0000000000000000 .16
+CTXDAT	0000000000000000 .17
+CTXDAT	0000000000000000 .18
+CTXDAT	0000000000000000 .19
+CTXDAT	0000000000000000 .20
+CTXDAT	0000000000000000 .21
+CTXDAT	0000000000000000 .22
+%D-(ReqFlexiCrypto.c        :  230) {       0} 
+ key+0 = 0x123456789abcdef 
+%D-(ReqFlexiCrypto.c        :  230) {       0} 
+ key+1 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  230) {       0} 
+ key+2 = 0x11223344556677 
+%D-(ReqFlexiCrypto.c        :  230) {       0} 
+ key+3 = 0x8899aabbccddeeff 
+%D-(ReqFlexiCrypto.c        :  234) {       0} 
+ KL1 = 0x123456789abcdef,  KL2 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  235) {       0} 
+ KR1 = 0x00000000,  KR2 = 0x00000000 
+%D-(ReqFlexiCrypto.c        :  245) {       0} 
+ KL1 = 0x123456789abcdef,  KL2 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  246) {       0} 
+ KR1 = 0x11223344556677,  KR2 = 0x8899aabbccddeeff 
+%D-(ReqFlexiCrypto.c        :  249) {       0} 
+ KL1 = 0x123456789abcdef,  KL2 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  250) {       0} 
+ KR1 = 0x11223344556677,  KR2 = 0x8899aabbccddeeff 
+%D-(ReqFlexiCrypto.c        :  270) {       0} 
+ KA1 = 0x17d1b5b046df07fa,  KA2 = 0xc9bb914b7f1937ee 
+%D-(ReqFlexiCrypto.c        :  271) {       0} 
+ KB1 = 0x3815214280a4d3c0,  KB2 = 0x1848fd9ac7b1fe60 
+%D-(ReqFlexiCrypto.c        :  306) {       0} 
+ kw1 = 0x123456789abcdef,  kw2 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  308) {       0} 
+ k1 = 0x3815214280a4d3c0,  k2 = 0x1848fd9ac7b1fe60 
+%D-(ReqFlexiCrypto.c        :  310) {       0} 
+ k3 = 0x9119a22ab33bc44c,  k4 = 0xd55de66ef77f8008 
+%D-(ReqFlexiCrypto.c        :  312) {       0} 
+ k5 = 0xdad8236f83fd64dd,  k6 = 0xc8a5bf8c9bf70be8 
+%D-(ReqFlexiCrypto.c        :  315) {       0} 
+ k7 = 0xa02934f006123f66,  k8 = 0xb1ec7f980e054850 
+%D-(ReqFlexiCrypto.c        :  317) {       0} 
+ k9 = 0x79bdffdb97530eca,  k10 = 0x8642002468acf135 
+%D-(ReqFlexiCrypto.c        :  319) {       0} 
+ k11 = 0xe0ff593772296fe3,  k12 = 0x26fdc2fa36b608db 
+%D-(ReqFlexiCrypto.c        :  321) {       0} 
+ ke3 = 0xffedcba987654321,  ke4 = 0x123456789abcde 
+%D-(ReqFlexiCrypto.c        :  323) {       0} 
+ k13 = 0x78899aabbccddeef,  k14 = 0xf001122334455667 
+%D-(ReqFlexiCrypto.c        :  325) {       0} 
+ k15 = 0x1848fd9ac7b1fe6,  k16 = 0x3815214280a4d3c 
+%D-(ReqFlexiCrypto.c        :  327) {       0} 
+ k17 = 0x97530eca86420024,  k18 = 0x68acf13579bdffdb 
+%D-(ReqFlexiCrypto.c        :  329) {       0} 
+ ke5 = 0x72296fe326fdc2fa,  ke6 = 0x36b608dbe0ff5937 
+%D-(ReqFlexiCrypto.c        :  331) {       0} 
+ k19 = 0xf3377bbfc004488c,  k20 = 0xd115599de2266aae 
+%D-(ReqFlexiCrypto.c        :  333) {       0} 
+ k21 = 0xdfc64dfb85f46d6c,  k22 = 0x11b7c1feb26ee452 
+%D-(ReqFlexiCrypto.c        :  335) {       0} 
+ k23 = 0x19080091a2b3c4d5,  k24 = 0xe6f7ff6e5d4c3b2a 
+%D-(ReqFlexiCrypto.c        :  337) {       0} 
+ kw3 = 0xff301c0a90a14052,  kw4 = 0x69e00c247ecd63d8 
+%D-(ReqFlexiCrypto.c        :  345) {       0} 
+ ------------------Camellia Encryption-------------------------1
+%D-(ReqFlexiCrypto.c        :  348) {       0} 
+ D1 = 0x123456789abcdef,  D2 = 0xfedcba9876543210 
+%D-(ReqFlexiCrypto.c        :  352) {       0} 
+ D1 = 0x00000000,  D2 = 0x00000000 
+%D-(ReqFlexiCrypto.c        :  355) {       0} 
+ D1 = 0xaf683dec327a41f2,  D2 = 0x18c5ed4fd7e1a7f8 
+%D-(ReqFlexiCrypto.c        :  358) {       0} 
+ D1 = 0x6cdc91f9e8cfe87c,  D2 = 0x11290760e3d45679 
+%D-(ReqFlexiCrypto.c        :  361) {       0} 
+ D1 = 0xba9f94ce51e4f86,  D2 = 0xb03326108ca113c4 
+%D-(ReqFlexiCrypto.c        :  364) {       0} 
+ D1 = 0xec9706f2e71cfd9e,  D2 = 0x7c967ddc6c8de0fc 
+%D-(ReqFlexiCrypto.c        :  367) {       0} 
+ D1 = 0x4b90ce24a1ef8d21,  D2 = 0x68819be59145836f 
+%D-(ReqFlexiCrypto.c        :  370) {       0} 
+ D1 = 0x5561c041a81e7a03,  D2 = 0x3b9a82d62709b61e 
+%D-(ReqFlexiCrypto.c        :  373) {       0} 
+ D1 = 0x98d5c815bb513ed3,  D2 = 0x81d334c59bcab000 
+%D-(ReqFlexiCrypto.c        :  376) {       0} 
+ D1 = 0x172a27e48adaaed0,  D2 = 0x7a09881b9bcab024 
+%D-(ReqFlexiCrypto.c        :  379) {       0} 
+ D1 = 0xadac6ae5e9f8637c,  D2 = 0x757796c512145583 
+%D-(ReqFlexiCrypto.c        :  382) {       0} 
+ D1 = 0xa72fff76ab95536d,  D2 = 0xf6d8c1d8be75c708 
+%D-(ReqFlexiCrypto.c        :  385) {       0} 
+ D1 = 0xb07095b65bfe1b4f,  D2 = 0x93bf774207a81fe0 
+%D-(ReqFlexiCrypto.c        :  388) {       0} 
+ D1 = 0xd990999225337897,  D2 = 0x6c8f6b4897095fb2 
+%D-(ReqFlexiCrypto.c        :  394) {       0} 
+ ------------------Camellia Encryption-------------------------2
+
+PKTDEF	uid:0000 (  360B  FlexiCrypto ) src_prt:00
+
+PKTHDR	3300004000170010 .0
+PKTHDR	00000158000f000f .1
+PKTHDR	0000000000100000 .2
+
+PKTDAT  dddddddddddddddd .0
+PKTDAT  dddddddddddddddd .1
+PKTDAT  0010001001300030 .2
+PKTDAT  70822cecb327c0e5 .3
+PKTDAT  e4855735ea0cae41 .4
+PKTDAT  23ef6b934519a521 .5
+PKTDAT  ed0e4f4e1d6592bd .6
+PKTDAT  86b8af8f7ceb1fce .7
+PKTDAT  3e30dc5f5ec50b1a .8
+PKTDAT  a6e139cad5475d3d .9
+PKTDAT  d9015ad651566c4d .10
+PKTDAT  8b0d9a66fbccb02d .11
+PKTDAT  74122b20f0b18499 .12
+PKTDAT  df4ccbc2347e7605 .13
+PKTDAT  6db7a931d11704d7 .14
+PKTDAT  14583a61de1b111c .15
+PKTDAT  320f9c165318f222 .16
+PKTDAT  fe44cfb2c3b57a91 .17
+PKTDAT  2408e8a860fc6950 .18
+PKTDAT  aad0a07da1896297 .19
+PKTDAT  545b1e95e0ff64d2 .20
+PKTDAT  10c40048a3f775db .21
+PKTDAT  8a03e6da093fdd94 .22
+PKTDAT  875c8302cd4a9033 .23
+PKTDAT  7367f6f39d7fbfe2 .24
+PKTDAT  529bd826c837c63b .25
+PKTDAT  81966f4b13be632e .26
+PKTDAT  e979a78c9f6ebc8e .27
+PKTDAT  29f5f9b62ffdb459 .28
+PKTDAT  7898066ae74671ba .29
+PKTDAT  d425ab4288a28dfa .30
+PKTDAT  7207b955f8eeac0a .31
+PKTDAT  36492a683c38f1a4 .32
+PKTDAT  4028d37bbbc943c1 .33
+PKTDAT  15e3adf477c7809e .34
+PKTDAT  a09e667f3bcc908b .35
+PKTDAT  b67ae8584caa73b2 .36
+PKTDAT  c6ef372fe94f82be .37
+PKTDAT  54ff53a5f1d36f1c .38
+PKTDAT  10e527fade682d1d .39
+PKTDAT  b05688c2b3e6c1fd .40
+PKTDAT  0123456789abcdef .41
+PKTDAT  fedcba9876543210 .42
+
+
+PREDEF	uid:0000.0 prt:0015 size:344
+PREDAT	00000010000f000f .0
+
+PREDAT  dddddddddddddddd .0
+PREDAT  dddddddddddddddd .1
+PREDAT  70822cecb327c0e5 .2
+PREDAT  e4855735ea0cae41 .3
+PREDAT  23ef6b934519a521 .4
+PREDAT  ed0e4f4e1d6592bd .5
+PREDAT  86b8af8f7ceb1fce .6
+PREDAT  3e30dc5f5ec50b1a .7
+PREDAT  a6e139cad5475d3d .8
+PREDAT  d9015ad651566c4d .9
+PREDAT  8b0d9a66fbccb02d .10
+PREDAT  74122b20f0b18499 .11
+PREDAT  df4ccbc2347e7605 .12
+PREDAT  6db7a931d11704d7 .13
+PREDAT  14583a61de1b111c .14
+PREDAT  320f9c165318f222 .15
+PREDAT  fe44cfb2c3b57a91 .16
+PREDAT  2408e8a860fc6950 .17
+PREDAT  aad0a07da1896297 .18
+PREDAT  545b1e95e0ff64d2 .19
+PREDAT  10c40048a3f775db .20
+PREDAT  8a03e6da093fdd94 .21
+PREDAT  875c8302cd4a9033 .22
+PREDAT  7367f6f39d7fbfe2 .23
+PREDAT  529bd826c837c63b .24
+PREDAT  81966f4b13be632e .25
+PREDAT  e979a78c9f6ebc8e .26
+PREDAT  29f5f9b62ffdb459 .27
+PREDAT  7898066ae74671ba .28
+PREDAT  d425ab4288a28dfa .29
+PREDAT  7207b955f8eeac0a .30
+PREDAT  36492a683c38f1a4 .31
+PREDAT  4028d37bbbc943c1 .32
+PREDAT  15e3adf477c7809e .33
+PREDAT  a09e667f3bcc908b .34
+PREDAT  b67ae8584caa73b2 .35
+PREDAT  c6ef372fe94f82be .36
+PREDAT  54ff53a5f1d36f1c .37
+PREDAT  10e527fade682d1d .38
+PREDAT  b05688c2b3e6c1fd .39
+PREDAT  6c8f6b4897095fb2 .40
+PREDAT  d990999225337897 .41
+
